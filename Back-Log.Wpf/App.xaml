@@ -1,9 +1,8 @@
-﻿<Application x:Class="Back_Log.Wpf.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Back_Log.Wpf"
-             StartupUri="MainWindow.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
-</Application>
+﻿<prism:PrismApplication
+    x:Class="Back_Log.Wpf.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Back_Log.Wpf"
+    xmlns:prism="http://prismlibrary.com/">
+    <Application.Resources />
+</prism:PrismApplication>
