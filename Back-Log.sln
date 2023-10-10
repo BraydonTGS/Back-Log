@@ -5,17 +5,21 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AB6BFB46-E526-4D8F-A1EE-7C521CA5C0C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Back-Log.Wpf", "Back-Log.Wpf\Back-Log.Wpf.csproj", "{430C3286-C54A-4936-9B87-C66B28E79953}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Back-Log.Wpf", "Back-Log.Wpf\Back-Log.Wpf.csproj", "{430C3286-C54A-4936-9B87-C66B28E79953}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Back-Log.Entity", "Back-Log.Entity\Back-Log.Entity.csproj", "{95A139B6-914F-408E-A4D8-6708289E0B24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Back-Log.Entity", "Back-Log.Entity\Back-Log.Entity.csproj", "{95A139B6-914F-408E-A4D8-6708289E0B24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Back-Log.Business", "Back-Log.Business\Back-Log.Business.csproj", "{7AF3C461-6660-4EF9-AA19-EF622DBAF17B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Back-Log.Business", "Back-Log.Business\Back-Log.Business.csproj", "{7AF3C461-6660-4EF9-AA19-EF622DBAF17B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{84C92F84-8B4A-4881-9077-3CBA5AF4EA09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Back-Log.Business.Tests", "Back-Log.Business.Tests\Back-Log.Business.Tests.csproj", "{773931EF-B887-4030-8446-29FF03F1152F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Back-Log.Business.Tests", "Back-Log.Business.Tests\Back-Log.Business.Tests.csproj", "{773931EF-B887-4030-8446-29FF03F1152F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Back-Log.Global", "Back-Log.Global\Back-Log.Global.csproj", "{47C50906-98B1-4572-A9F8-32BA7309F83C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Back-Log.Global", "Back-Log.Global\Back-Log.Global.csproj", "{47C50906-98B1-4572-A9F8-32BA7309F83C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{CC43EEDC-811C-4CCD-873B-5CA2412716E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Back-Log.VideoGameModule", "Back-Log.VideoGameModule\Back-Log.VideoGameModule.csproj", "{B744CFFF-6424-4A8E-BB5A-F7C89B7C03F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +47,10 @@ Global
 		{47C50906-98B1-4572-A9F8-32BA7309F83C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47C50906-98B1-4572-A9F8-32BA7309F83C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47C50906-98B1-4572-A9F8-32BA7309F83C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B744CFFF-6424-4A8E-BB5A-F7C89B7C03F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B744CFFF-6424-4A8E-BB5A-F7C89B7C03F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B744CFFF-6424-4A8E-BB5A-F7C89B7C03F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B744CFFF-6424-4A8E-BB5A-F7C89B7C03F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +61,8 @@ Global
 		{7AF3C461-6660-4EF9-AA19-EF622DBAF17B} = {AB6BFB46-E526-4D8F-A1EE-7C521CA5C0C3}
 		{773931EF-B887-4030-8446-29FF03F1152F} = {84C92F84-8B4A-4881-9077-3CBA5AF4EA09}
 		{47C50906-98B1-4572-A9F8-32BA7309F83C} = {AB6BFB46-E526-4D8F-A1EE-7C521CA5C0C3}
+		{CC43EEDC-811C-4CCD-873B-5CA2412716E8} = {AB6BFB46-E526-4D8F-A1EE-7C521CA5C0C3}
+		{B744CFFF-6424-4A8E-BB5A-F7C89B7C03F4} = {CC43EEDC-811C-4CCD-873B-5CA2412716E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B3FDAABD-09C4-4AD6-98D5-7FD53E1B6EAD}
