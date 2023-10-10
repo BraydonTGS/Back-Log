@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Back-Log.Wpf", "Back-Log.Wp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Back-Log.Entity", "Back-Log.Entity\Back-Log.Entity.csproj", "{95A139B6-914F-408E-A4D8-6708289E0B24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Back-Log.Business", "Back-Log.Business\Back-Log.Business.csproj", "{7AF3C461-6660-4EF9-AA19-EF622DBAF17B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{95A139B6-914F-408E-A4D8-6708289E0B24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95A139B6-914F-408E-A4D8-6708289E0B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95A139B6-914F-408E-A4D8-6708289E0B24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AF3C461-6660-4EF9-AA19-EF622DBAF17B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AF3C461-6660-4EF9-AA19-EF622DBAF17B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AF3C461-6660-4EF9-AA19-EF622DBAF17B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AF3C461-6660-4EF9-AA19-EF622DBAF17B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +36,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{430C3286-C54A-4936-9B87-C66B28E79953} = {AB6BFB46-E526-4D8F-A1EE-7C521CA5C0C3}
 		{95A139B6-914F-408E-A4D8-6708289E0B24} = {AB6BFB46-E526-4D8F-A1EE-7C521CA5C0C3}
+		{7AF3C461-6660-4EF9-AA19-EF622DBAF17B} = {AB6BFB46-E526-4D8F-A1EE-7C521CA5C0C3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B3FDAABD-09C4-4AD6-98D5-7FD53E1B6EAD}
