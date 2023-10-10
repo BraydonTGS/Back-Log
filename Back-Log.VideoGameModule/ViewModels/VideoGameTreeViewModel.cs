@@ -2,7 +2,7 @@
 
 namespace Back_Log.VideoGameModule.ViewModels
 {
-    public class VideoGameDetailsViewModel : ViewModelBase
+    public class VideoGameTreeViewModel : ViewModelBase
     {
     }
 }

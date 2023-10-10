@@ -1,4 +1,5 @@
-﻿using Back_Log.Wpf.Views;
+﻿using Back_Log.VideoGameModule;
+using Back_Log.Wpf.Views;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Unity;
@@ -32,6 +33,7 @@ namespace Back_Log.Wpf
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
+            moduleCatalog.AddModule<ModuleVideoGame>();
         }
     }
 }

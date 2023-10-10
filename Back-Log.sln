@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{CC43
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Back-Log.VideoGameModule", "Back-Log.VideoGameModule\Back-Log.VideoGameModule.csproj", "{B744CFFF-6424-4A8E-BB5A-F7C89B7C03F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Back-Log.SharedModule", "Back-Log.SharedModule\Back-Log.SharedModule.csproj", "{6FEEDDFE-D9E6-43CC-B916-1FA6DB16B9C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{B744CFFF-6424-4A8E-BB5A-F7C89B7C03F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B744CFFF-6424-4A8E-BB5A-F7C89B7C03F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B744CFFF-6424-4A8E-BB5A-F7C89B7C03F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FEEDDFE-D9E6-43CC-B916-1FA6DB16B9C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FEEDDFE-D9E6-43CC-B916-1FA6DB16B9C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FEEDDFE-D9E6-43CC-B916-1FA6DB16B9C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FEEDDFE-D9E6-43CC-B916-1FA6DB16B9C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{47C50906-98B1-4572-A9F8-32BA7309F83C} = {AB6BFB46-E526-4D8F-A1EE-7C521CA5C0C3}
 		{CC43EEDC-811C-4CCD-873B-5CA2412716E8} = {AB6BFB46-E526-4D8F-A1EE-7C521CA5C0C3}
 		{B744CFFF-6424-4A8E-BB5A-F7C89B7C03F4} = {CC43EEDC-811C-4CCD-873B-5CA2412716E8}
+		{6FEEDDFE-D9E6-43CC-B916-1FA6DB16B9C2} = {CC43EEDC-811C-4CCD-873B-5CA2412716E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B3FDAABD-09C4-4AD6-98D5-7FD53E1B6EAD}

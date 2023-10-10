@@ -12,7 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Back-Log.Wpf\Back-Log.Wpf.csproj" />
+    <ProjectReference Include="..\Back-Log.Business\Back-Log.Business.csproj" />
+    <ProjectReference Include="..\Back-Log.Global\Back-Log.Global.csproj" />
+    <ProjectReference Include="..\Back-Log.SharedModule\Back-Log.SharedModule.csproj" />
   </ItemGroup>
 
 </Project>

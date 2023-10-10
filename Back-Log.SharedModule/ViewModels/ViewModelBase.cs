@@ -1,6 +1,6 @@
 ﻿using Prism.Mvvm;
 
-namespace Back_Log.Wpf.Base
+namespace Back_Log.SharedModule.ViewModels
 {
     public class ViewModelBase : BindableBase
     {

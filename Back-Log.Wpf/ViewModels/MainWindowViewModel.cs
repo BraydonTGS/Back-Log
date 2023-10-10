@@ -1,4 +1,4 @@
-﻿using Back_Log.Wpf.Base;
+﻿using Back_Log.SharedModule.ViewModels;
 using Prism.Commands;
 using System;
 
