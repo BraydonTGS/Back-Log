@@ -12,11 +12,27 @@
     Background="Transparent"
     mc:Ignorable="d">
 
-    <Grid>
-        <TextBlock
-            Margin="30,15"
-            FontSize="30"
-            Foreground="White"
-            Text="Video Game Details" />
-    </Grid>
+    <Border
+        Margin="10"
+        Padding="10"
+        Background="Transparent"
+        BorderBrush="#cec9cc"
+        BorderThickness="5"
+        CornerRadius="20"
+        SnapsToDevicePixels="True">
+
+        <!--  Main Grid  -->
+        <!--  Video Game Selected  -->
+        <Grid Grid.IsSharedSizeScope="True">
+
+            <!--  3 Rows  -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+        </Grid>
+    </Border>
 </UserControl>
