@@ -15,7 +15,7 @@
     <Border
         Margin="10"
         Background="Transparent"
-        BorderBrush="#908a99"
+        BorderBrush="#cec9cc"
         BorderThickness="5"
         CornerRadius="20">
 
