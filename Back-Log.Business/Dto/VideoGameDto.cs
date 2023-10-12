@@ -1,9 +1,10 @@
-﻿using Back_Log.Global.Constants;
+﻿using Back_Log.Business.Base;
+using Back_Log.Global.Constants;
 using Back_Log.Global.Identifiers;
 
 namespace Back_Log.Business.Dto
 {
-    public class VideoGameDto
+    public class VideoGameDto : DtoModelBase
     {      
         public VideoGameId VideoGameId { get; private set; }
         public string Title { get; set; }
