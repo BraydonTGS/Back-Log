@@ -39,7 +39,11 @@
                             VerticalAlignment="Center"
                             FontSize="20"
                             FontWeight="Bold"
-                            Text="{Binding Title}"/>
+                            Text="{Binding Title}">
+                            <TextBlock.InputBindings>
+                                <MouseBinding Command="{Binding VideoGameDoubleClickCommand}" MouseAction="LeftClick" />
+                            </TextBlock.InputBindings>
+                        </TextBlock>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

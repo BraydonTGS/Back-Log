@@ -1,24 +1,48 @@
 ﻿using Back_Log.Business.Dto;
 using Back_Log.Global.Constants;
 using Back_Log.SharedModule.ViewModels;
+using Prism.Commands;
+using Prism.Regions;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace Back_Log.VideoGameModule.ViewModels
 {
-    public class VideoGameTreeViewModel : ViewModelBase
+    public class VideoGameTreeViewModel : ViewModelBase, INavigationAware
     {
-        private ObservableCollection<VideoGameDto> _videoGames;
+        public IRegionManager _regionManager { get; }
 
+        private ObservableCollection<VideoGameDto> _videoGames;
+        
         public ObservableCollection<VideoGameDto> VideoGames
         {
             get { return _videoGames; }
             set { SetProperty(ref _videoGames, value); }
         }
 
-        public VideoGameTreeViewModel()
+        public DelegateCommand<VideoGameDto> VideoGameDoubleClickCommand { get; private set; }
+
+        public VideoGameTreeViewModel(IRegionManager regionManager )
         {
             InitializeTestData();
+            _regionManager = regionManager;
+
+            VideoGameDoubleClickCommand = new DelegateCommand<VideoGameDto>(OnVideoGameDoubleClickCommandExecuted);
+        }
+
+        private void OnVideoGameDoubleClickCommandExecuted(VideoGameDto selectedVideoGame)
+        {
+            if (selectedVideoGame != null)
+            {
+                // Navigate to VideoGameDetails view passing the selected VideoGameDto as navigation parameter
+                var parameters = new NavigationParameters
+                {
+                    { "VideoGameDto", selectedVideoGame }
+                };
+                var uri = new Uri("VideoGameDetails", UriKind.Relative);
+                _regionManager.RequestNavigate("MainContentRegion", uri, parameters);
+            }
         }
 
         private void InitializeTestData()
@@ -61,6 +85,19 @@ namespace Back_Log.VideoGameModule.ViewModels
                 ESRBRating = rating,
                 IsCompleted = isCompleted
             };
+        }
+
+        public void OnNavigatedTo(NavigationContext navigationContext)
+        {
+        }
+
+        public bool IsNavigationTarget(NavigationContext navigationContext)
+        {
+            return false;
+        }
+        public void OnNavigatedFrom(NavigationContext navigationContext)
+        {
+           
         }
     }
 }
