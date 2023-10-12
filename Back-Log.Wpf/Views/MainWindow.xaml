@@ -8,8 +8,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="http://prismlibrary.com/"
     Title="Back-Log"
-    Width="1200"
-    Height="700"
+    Width="1500"
+    Height="750"
     prism:ViewModelLocator.AutoWireViewModel="True"
     Background="Transparent"
     FontSize="14"
@@ -117,7 +117,7 @@
 
             </Border>
 
-            <Grid Grid.Row="1" Margin="0,5,0,0">
+            <Grid Grid.Row="1" Margin="10,5,10,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="575" />
                     <RowDefinition />
