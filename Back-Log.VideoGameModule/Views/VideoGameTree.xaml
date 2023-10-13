@@ -20,7 +20,7 @@
         CornerRadius="20">
 
         <!--  VideoGame Listing  -->
-        <ListView ItemsSource="{Binding VideoGames}">
+        <ListView ItemsSource="{Binding VideoGames}" SelectedItem="{Binding SelectedVideoGame}">
             <ListView.Style>
                 <Style TargetType="{x:Type ListView}">
                     <Setter Property="Background" Value="Transparent" />
@@ -39,11 +39,8 @@
                             VerticalAlignment="Center"
                             FontSize="20"
                             FontWeight="Bold"
-                            Text="{Binding Title}">
-                            <TextBlock.InputBindings>
-                                <MouseBinding Command="{Binding VideoGameDoubleClickCommand}" MouseAction="LeftClick" />
-                            </TextBlock.InputBindings>
-                        </TextBlock>
+                            Text="{Binding Title}" />
+
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

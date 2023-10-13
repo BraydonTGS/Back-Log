@@ -9,7 +9,7 @@ using System.Collections.ObjectModel;
 
 namespace Back_Log.VideoGameModule.ViewModels
 {
-    public class VideoGameTreeViewModel : ViewModelBase, INavigationAware
+    public class VideoGameTreeViewModel : ViewModelBase
     {
         public IRegionManager _regionManager { get; }
 
@@ -21,24 +21,36 @@ namespace Back_Log.VideoGameModule.ViewModels
             set { SetProperty(ref _videoGames, value); }
         }
 
-        public DelegateCommand<VideoGameDto> VideoGameDoubleClickCommand { get; private set; }
+        private VideoGameDto _selectedVideoGame;
+
+        public VideoGameDto SelectedVideoGame
+        {
+            get { return _selectedVideoGame; }
+            set
+            {
+                SetProperty(ref _selectedVideoGame, value);
+                OnLoadDetailsForSelectedGameExecuted();
+            }
+        }
+
+        public DelegateCommand LoadDetailsForSelectedGame { get; private set; }
 
         public VideoGameTreeViewModel(IRegionManager regionManager )
         {
             InitializeTestData();
             _regionManager = regionManager;
 
-            VideoGameDoubleClickCommand = new DelegateCommand<VideoGameDto>(OnVideoGameDoubleClickCommandExecuted);
+            LoadDetailsForSelectedGame = new DelegateCommand(OnLoadDetailsForSelectedGameExecuted);
         }
 
-        private void OnVideoGameDoubleClickCommandExecuted(VideoGameDto selectedVideoGame)
+        private void OnLoadDetailsForSelectedGameExecuted()
         {
-            if (selectedVideoGame != null)
+            if (_selectedVideoGame != null)
             {
                 // Navigate to VideoGameDetails view passing the selected VideoGameDto as navigation parameter
                 var parameters = new NavigationParameters
                 {
-                    { "VideoGameDto", selectedVideoGame }
+                    { "VideoGameDto", _selectedVideoGame }
                 };
                 var uri = new Uri("VideoGameDetails", UriKind.Relative);
                 _regionManager.RequestNavigate("MainContentRegion", uri, parameters);
@@ -85,19 +97,6 @@ namespace Back_Log.VideoGameModule.ViewModels
                 ESRBRating = rating,
                 IsCompleted = isCompleted
             };
-        }
-
-        public void OnNavigatedTo(NavigationContext navigationContext)
-        {
-        }
-
-        public bool IsNavigationTarget(NavigationContext navigationContext)
-        {
-            return false;
-        }
-        public void OnNavigatedFrom(NavigationContext navigationContext)
-        {
-           
         }
     }
 }
