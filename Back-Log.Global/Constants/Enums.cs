@@ -4,6 +4,7 @@ namespace Back_Log.Global.Constants
 {
     public static class Enums
     {
+
         public enum VideoGameGenre
         {
             [Description("Action")]
@@ -13,7 +14,7 @@ namespace Back_Log.Global.Constants
             Adventure,
 
             [Description("Action-Adventure")]
-            ActionAdventure,
+            ActionAdventure;
 
             [Description("Role-Playing Game")]
             RPG,

@@ -13,7 +13,7 @@
     Height="750"
     prism:ViewModelLocator.AutoWireViewModel="True"
     Background="Transparent"
-    FontFamily="Helvetica Neue""
+    FontFamily="Helvetica Neue"
     FontSize="14"
     MouseDown="Window_MouseDown"
     ResizeMode="NoResize"
