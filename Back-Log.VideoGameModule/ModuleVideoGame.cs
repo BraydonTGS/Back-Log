@@ -12,7 +12,6 @@ namespace Back_Log.VideoGameModule
         {
             var regionManager = containerProvider.Resolve<IRegionManager>();
             regionManager.RegisterViewWithRegion("MainTreeRegion", typeof(VideoGameTree));
-            regionManager.RegisterViewWithRegion("MainContentRegion", typeof(VideoGameDetails));
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)

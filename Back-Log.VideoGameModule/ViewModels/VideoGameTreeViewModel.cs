@@ -53,7 +53,7 @@ namespace Back_Log.VideoGameModule.ViewModels
                     { "VideoGameDto", _selectedVideoGame }
                 };
                 var uri = new Uri("VideoGameDetails", UriKind.Relative);
-                _regionManager.RequestNavigate("MainContentRegion", uri, parameters);
+                _regionManager.RequestNavigate(Regions.MainContentRegion, uri, parameters);
             }
         }
 

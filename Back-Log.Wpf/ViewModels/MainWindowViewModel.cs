@@ -1,4 +1,5 @@
-﻿using Back_Log.SharedModule.ViewModels;
+﻿using Back_Log.Global.Constants;
+using Back_Log.SharedModule.ViewModels;
 using Prism.Commands;
 using System;
 
@@ -22,7 +23,7 @@ namespace Back_Log.Wpf.ViewModels
 
         public MainWindowViewModel()
         {
-            Title = "Back-Log";
+            Title = Constants.Title;
 
             MinimizeWindowCommand = new DelegateCommand(OnMinimizeWindowCommandExecuted);
             CloseWindowCommand = new DelegateCommand(OnCloseWindowCommandExecuted);

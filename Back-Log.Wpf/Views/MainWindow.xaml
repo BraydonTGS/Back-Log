@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:fa="http://schemas.fontawesome.io/icons/"
+    xmlns:global="clr-namespace:Back_Log.Global.Constants;assembly=Back-Log.Global"
     xmlns:local="clr-namespace:Back_Log.Wpf"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="http://prismlibrary.com/"
@@ -18,7 +19,6 @@
     WindowStartupLocation="CenterScreen"
     WindowStyle="None"
     mc:Ignorable="d">
-
     <!--  Main Window  -->
     <Border BorderThickness="5">
         <!--  Main Window Border Brush Gradient  -->
@@ -75,7 +75,7 @@
             <!--  Username  -->
             <TextBlock
                 Grid.Column="0"
-                Margin="0,13,80,0"
+                Margin="0,13,70,0"
                 Padding="10"
                 HorizontalAlignment="Right"
                 FontSize="20"
@@ -127,9 +127,9 @@
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
                 <!--  Regions  -->
-                <ContentControl prism:RegionManager.RegionName="MainTreeRegion" />
+                <ContentControl prism:RegionManager.RegionName="{x:Static global:Regions.MainTreeRegion}" />
 
-                <ContentControl Grid.Column="1" prism:RegionManager.RegionName="MainContentRegion" />
+                <ContentControl Grid.Column="1" prism:RegionManager.RegionName="{x:Static global:Regions.MainContentRegion}" />
             </Grid>
         </Grid>
     </Border>
