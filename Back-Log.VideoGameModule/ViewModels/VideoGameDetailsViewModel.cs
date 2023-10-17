@@ -1,6 +1,7 @@
 ﻿using Back_Log.Business.Dto;
 using Back_Log.SharedModule.ViewModels;
 using Prism.Regions;
+using System.Windows.Navigation;
 
 namespace Back_Log.VideoGameModule.ViewModels
 {
@@ -35,7 +36,7 @@ namespace Back_Log.VideoGameModule.ViewModels
         {
             try
             {
-                if (navigationContext.Parameters.TryGetValue("VideoGameDto", out VideoGameDto selectedVideoGame))
+                if (navigationContext.Parameters.TryGetValue(nameof(VideoGameDto), out VideoGameDto selectedVideoGame))
                 {
                     Model = selectedVideoGame;
                 }

@@ -1,6 +1,7 @@
 ﻿using Back_Log.Business.Dto;
 using Back_Log.Global.Constants;
 using Back_Log.SharedModule.ViewModels;
+using Back_Log.VideoGameModule.Views;
 using Prism.Commands;
 using Prism.Regions;
 using System;
@@ -14,7 +15,7 @@ namespace Back_Log.VideoGameModule.ViewModels
         public IRegionManager _regionManager { get; }
 
         private ObservableCollection<VideoGameDto> _videoGames;
-        
+
         public ObservableCollection<VideoGameDto> VideoGames
         {
             get { return _videoGames; }
@@ -35,7 +36,7 @@ namespace Back_Log.VideoGameModule.ViewModels
 
         public DelegateCommand LoadDetailsForSelectedGame { get; private set; }
 
-        public VideoGameTreeViewModel(IRegionManager regionManager )
+        public VideoGameTreeViewModel(IRegionManager regionManager)
         {
             InitializeTestData();
             _regionManager = regionManager;
@@ -50,9 +51,9 @@ namespace Back_Log.VideoGameModule.ViewModels
                 // Navigate to VideoGameDetails view passing the selected VideoGameDto as navigation parameter
                 var parameters = new NavigationParameters
                 {
-                    { "VideoGameDto", _selectedVideoGame }
+                    { nameof(VideoGameDto), _selectedVideoGame }
                 };
-                var uri = new Uri("VideoGameDetails", UriKind.Relative);
+                var uri = new Uri(nameof(VideoGameDetails), UriKind.Relative);
                 _regionManager.RequestNavigate(Regions.MainContentRegion, uri, parameters);
             }
         }
