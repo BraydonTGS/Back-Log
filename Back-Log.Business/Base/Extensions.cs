@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System.ComponentModel;
+using System.Runtime.Serialization;
 
 namespace Back_Log.Business.Base
 {
@@ -9,15 +10,15 @@ namespace Back_Log.Business.Base
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static string GetEnumMemberValue(Enum value)
+        public static string GetEnumMemberValue(this Enum value)
         {
             var field = value.GetType().GetField(value.ToString());
             if (field != null)
             {
-                var enumMemberAttribute = (EnumMemberAttribute)Attribute.GetCustomAttribute(field, typeof(EnumMemberAttribute));
-                if (enumMemberAttribute != null)
+                var description = (DescriptionAttribute)Attribute.GetCustomAttribute(field, typeof(DescriptionAttribute));
+                if (description != null)
                 {
-                    return enumMemberAttribute.Value;
+                    return description.Description;
                 }
             }
 

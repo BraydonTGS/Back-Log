@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Back_Log.VideoGameModule.Views"
+    xmlns:local1="clr-namespace:Back_Log.SharedModule.Converters;assembly=Back-Log.SharedModule"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="http://prismlibrary.com/"
     d:DesignHeight="450"
@@ -11,6 +12,10 @@
     prism:ViewModelLocator.AutoWireViewModel="True"
     Background="Transparent"
     mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <local1:EnumDescriptionConverter x:Key="EnumDescriptionConverter" />
+    </UserControl.Resources>
 
     <Border
         Margin="10"
@@ -53,7 +58,7 @@
                 <TextBlock
                     FontSize="25"
                     FontWeight="Bold"
-                    Text="{Binding Model.GameGenre}" />
+                    Text="{Binding Model.GameGenre, Converter={StaticResource EnumDescriptionConverter}}" />
             </StackPanel>
 
 
