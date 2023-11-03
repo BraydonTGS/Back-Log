@@ -1,0 +1,139 @@
+﻿<Window
+    x:Class="Back_Log.Wpf.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:global="clr-namespace:Back_Log.Global.Constants;assembly=Back-Log.Global"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:local="clr-namespace:Back_Log.Wpf"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prism="http://prismlibrary.com/"
+    Title="Back-Log"
+    Width="1500"
+    Height="750"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    Background="Transparent"
+    FontFamily="Helvetica Neue"
+    FontSize="14"
+    MouseDown="Window_MouseDown"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <!--  Main Window  -->
+    <Border BorderThickness="5">
+        <!--  Main Window Border Brush Gradient  -->
+
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                <GradientStop Color="#cec9cc" />
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+
+        <!--  Main Window Background Gradient  -->
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0, 1" EndPoint="1, 0">
+                <GradientStop Offset="0" Color="#908a99" />
+                <GradientStop Offset="0.75" Color="#4f43ae" />
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <!--  Grid Setup  -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+            <!--  Title and Add Button  -->
+            <TextBlock
+                Grid.Column="0"
+                Margin="10,0,0,0"
+                Padding="10"
+                FontSize="40"
+                FontWeight="Bold"
+                Foreground="#FFF"
+                Text="{Binding Title, FallbackValue=Back-Log}" />
+
+
+
+            <!--  Font Awesome  -->
+            <iconPacks:PackIconControl
+                Grid.Column="0"
+                Width="50"
+                Height="50"
+                Margin="210,5,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Foreground="#cec9cc"
+                Kind="{x:Static iconPacks:PackIconFontAwesomeKind.GamepadSolid}" />
+
+            <!--  Username  -->
+            <TextBlock
+                Grid.Column="0"
+                Margin="0,13,70,0"
+                Padding="10"
+                HorizontalAlignment="Right"
+                FontSize="20"
+                FontWeight="Bold"
+                Foreground="#FFF"
+                Text="{Binding Username, FallbackValue='Welcome'}" />
+
+            <!--  Minimize Button  -->
+            <Border Margin="0,0,40,0" Style="{StaticResource MinimizeButtonTheme}">
+                <Border.InputBindings>
+                    <MouseBinding Command="{Binding MinimizeWindowCommand}" Gesture="LeftClick" />
+                </Border.InputBindings>
+                <TextBlock
+                    Margin="0,0,0,3"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Background="Transparent"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Text="-" />
+
+            </Border>
+
+            <!--  Close Button  -->
+            <Border Margin="0,0,5,0" Style="{StaticResource CloseButtonTheme}">
+                <Border.InputBindings>
+                    <MouseBinding Command="{Binding CloseWindowCommand}" Gesture="LeftClick" />
+                </Border.InputBindings>
+                <TextBlock
+                    Margin="0,0,0,5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Background="Transparent"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Text="x" />
+
+            </Border>
+
+            <Grid Grid.Row="1" Margin="10,5,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="575" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <!--  Regions  -->
+                <ContentControl prism:RegionManager.RegionName="{x:Static global:Regions.MainTreeRegion}" />
+
+                <ContentControl Grid.Column="1" prism:RegionManager.RegionName="{x:Static global:Regions.MainContentRegion}" />
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

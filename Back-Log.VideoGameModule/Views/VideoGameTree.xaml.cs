@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Back_Log.Wpf
+namespace Back_Log.VideoGameModule.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for VideoGameTree.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class VideoGameTree : UserControl
     {
-        public MainWindow()
+        public VideoGameTree()
         {
             InitializeComponent();
         }

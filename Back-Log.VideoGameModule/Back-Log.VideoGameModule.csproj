@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Back_Log.VideoGameModule</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Back-Log.Business\Back-Log.Business.csproj" />
+    <ProjectReference Include="..\Back-Log.Global\Back-Log.Global.csproj" />
+    <ProjectReference Include="..\Back-Log.SharedModule\Back-Log.SharedModule.csproj" />
+  </ItemGroup>
+
+</Project>
