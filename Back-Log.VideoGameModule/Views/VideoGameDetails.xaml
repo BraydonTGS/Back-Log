@@ -106,7 +106,7 @@
                 <TextBlock
                     FontSize="25"
                     FontWeight="Bold"
-                    Text="{Binding Model.ESRBRating}" />
+                    Text="{Binding Model.ESRBRating, Converter={StaticResource EnumDescriptionConverter}}" />
             </StackPanel>
 
             <!--  Completed Checkbox  -->

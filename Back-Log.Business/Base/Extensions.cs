@@ -10,9 +10,9 @@ namespace Back_Log.Business.Base
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static string GetEnumMemberValue(this Enum value)
+        public static string GetEnumMemberValue(this Enum enumValue)
         {
-            var field = value.GetType().GetField(value.ToString());
+            var field = enumValue.GetType().GetField(enumValue.ToString());
             if (field != null)
             {
                 var description = (DescriptionAttribute)Attribute.GetCustomAttribute(field, typeof(DescriptionAttribute));
@@ -22,7 +22,7 @@ namespace Back_Log.Business.Base
                 }
             }
 
-            return value.ToString();
+            return enumValue.ToString();
         }
     }
 }
